@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal to Binary Converter</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="converter-container">
+            <h2 class="title">Decimal to Binary Converter</h2>
+            
+            <!-- Langkah-langkah convert -->
+            <div id="initialState" class="initial-state">
+                <div class="input-section justify-content-center">
+                    <input type="number" id="decimalInput" class="number-input" placeholder="0" min="0">
+                    <span class="label">: 2 =</span>
+                    <span class="label">Sisanya</span>
+                    <div class="number-input" style="background-color: #dee2e6;">?</div>
+                </div>
+                <button class="convert-btn" onclick="convertToBinary()">
+                    <i class="fas fa-exchange-alt me-2"></i>Convert
+                </button>
+                <br>
+                <div class="owner-text">
+                  <i class="fas fa-user me-2"></i>Created by Faris Iskandar Hafidz
+              </div>
+            </div>
+            
+            <!-- copy and reset Container -->
+            <div id="stepsContainer" class="steps-container">
+                <div id="divisionSteps"></div>
+                
+                <div class="result-section">
+                    <div class="result-text" id="resultText"></div>
+                    <div class="d-flex gap-2">
+                        <button class="btn copy-btn" onclick="copyResult()">
+                            <i class="fas fa-copy me-2"></i>Copy
+                        </button>
+                        <button class="btn copy-btn" onclick="resetConverter()">
+                            <i class="fas fa-redo me-2"></i>Reset
+                        </button>
+                    </div>
+                </div>
+                <div class="owner-text">
+                  <i class="fas fa-user me-2"></i>Created by Faris Iskandar Hafidz
+
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- menampilkan alert jika berhasil di copy -->
+    <div class="toast" id="copyToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i class="fas fa-check-circle text-success me-2"></i>
+            <strong class="me-auto">Berhasil!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Hasil binary telah disalin ke clipboard
+        </div>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/style.js"></script>
+</body>
+</html>
