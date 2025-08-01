@@ -1,0 +1,39 @@
+
+.main-content {
+    flex: 1;
+}
+
+.bg-dark {
+    background-color: #212529 !important;
+}
+
+.classDiv {
+    border-top: 1px solid #495057;
+    margin-top: auto; /* This pushes the footer to bottom */
+}
+
+.classDiv a {
+    transition: color 0.3s ease;
+}
+
+.classDiv a:hover {
+    color: #adb5bd !important;
+}
+
+/* Icon spacing */
+.classDiv a i {
+    margin-right: 5px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .classDiv .container {
+        text-align: center;
+    }
+    
+    .classDiv .container > div:first-child a,
+    .classDiv .container > div:last-child a {
+        display: inline-block;
+        margin: 3px 8px;
+    }
+}
